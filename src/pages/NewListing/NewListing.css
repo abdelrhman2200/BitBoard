@@ -1,0 +1,102 @@
+.new-listing-page {
+  background: #0b0f1a;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px 5%;
+  font-family: "Outfit", sans-serif;
+}
+
+.new-listing-page h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #f0b90b;
+  text-align: center;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Card Style */
+.listing-card {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #1c1c2b;
+  transition: transform 0.25s ease;
+}
+
+/* Colorful Card Gradient */
+.listing-card.colorful-card {
+  background: linear-gradient(145deg, #1e1e2f, #26263d);
+  border: 1px solid #302b63;
+  box-shadow: 0 0 12px rgba(121, 39, 255, 0.35);
+}
+
+.listing-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Header Layout */
+.listing-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.coin-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #f0b90b;
+  margin-right: 12px;
+}
+
+.coin-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.symbol-badge {
+  background: #f0b90b;
+  color: #0b0f1a;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* Price Coloring */
+.positive {
+  color: #00d084;
+}
+
+.negative {
+  color: #ff4d4d;
+}
+
+/* Responsive Text Sizes */
+@media (max-width: 768px) {
+  .new-listing-page h2 {
+    font-size: 22px;
+  }
+
+  .listing-card {
+    font-size: 14px;
+  }
+
+  .coin-image {
+    width: 32px;
+    height: 32px;
+  }
+}

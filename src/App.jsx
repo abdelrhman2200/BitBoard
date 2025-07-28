@@ -5,6 +5,10 @@ import Home from "./pages/Home/Home";
 import Coins from "./pages/Coins/Coins";
 import CoinDetails from "./pages/CoinDetails/CoinDetails.jsx";
 import Calculator from "./pages/Calculator/Calculator";
+import NewListing from './pages/NewListing/NewListing';
+
+
+
 
 const App = () => {
   return (
@@ -15,6 +19,7 @@ const App = () => {
         <Route path="/coins" element={<Coins />} />
         <Route path="/coin/:id" element={<CoinDetails />} />
         <Route path="/calculator" element={<Calculator />} />
+        <Route path="/new-listing" element={<NewListing />} />
       </Routes>
     </div>
   );

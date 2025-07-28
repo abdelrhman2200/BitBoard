@@ -15,7 +15,9 @@ const Home = () => {
   const searchWrapperRef = useRef(null);
 
   useEffect(() => {
+
     setDisplayCoin(allCoin);
+    console.log("All coins from context:", allCoin);
   }, [allCoin]);
 
   const getCurrencySymbol = () => {
