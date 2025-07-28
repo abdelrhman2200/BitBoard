@@ -1,0 +1,175 @@
+.home {
+  padding: 0px 8px;
+  padding-bottom: 96px;
+}
+
+.hero {
+  max-width: 600px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: max(3vw, 40px);
+  color: #fff;
+}
+
+.hero p {
+  width: 75%;
+  color: #e3e3e3;
+  line-height: 1.5;
+}
+
+.hero .search-wrapper {
+  padding: 8px;
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.hero input {
+  flex: 1;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  padding-left: 8px;
+}
+
+.hero button {
+  border: none;
+  background: #7927ff;
+  color: white;
+  font-size: 16px;
+  padding: 8px 32px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* SEARCH DROPDOWN */
+.search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgb(44, 44, 44);
+  border-radius: 0 0 5px 5px;
+  border-top: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.search-dropdown li {
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.search-dropdown li:hover {
+  background-color: #f2f2f2;
+}
+
+.search-dropdown img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===== TABLE & PAGINATION (UNCHANGED) ===== */
+
+.crypto-table {
+  max-width: 1000px;
+  margin: auto;
+  background: linear-gradient(rgba(84, 3, 255, 0.1), rgba(105, 2, 153, 0.1));
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 40px;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.table-layout {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1.5fr;
+  padding: 16px 24px;
+  align-items: center;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.table-head {
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-layout img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.coin-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.symbol {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.market-cap {
+  text-align: right;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 0.25rem;
+}
+
+.pagination button {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination button:hover {
+  background-color: #333;
+}
+
+.pagination button.active {
+  background-color: #f0b90b;
+  color: #000;
+  font-weight: bold;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

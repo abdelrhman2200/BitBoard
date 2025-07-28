@@ -1,0 +1,95 @@
+.calculator-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: flex-start;
+  background: #0b0f1a;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.calculator-form {
+  max-width: 450px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.calculator-form h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #f0b90b;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-row select,
+.input-row input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  flex: 1;
+  background: #1a1a2e;
+  color: #fff;
+}
+
+.remove-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.add-btn {
+  background: #7927ff;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.total-value {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #f0f0f0;
+}
+
+.calculator-chart {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.chart-placeholder {
+  color: #ccc;
+  text-align: center;
+  padding: 40px;
+}
+@media (max-width: 768px) {
+  .calculator-page {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .calculator-chart {
+    margin-top: 32px;
+    width: 100%;
+  }
+}
