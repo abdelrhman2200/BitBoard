@@ -1,10 +1,9 @@
-import React, { useContext, useState } from 'react';
-import './Navbar.css';
-import logo from '../../assets/logo.png';
-import arrow_icon from '../../assets/arrow_icon.png';
-import { CoinContext } from '../../context/CoinContext';
-import { Link } from 'react-router-dom';
-
+import React, { useContext, useState } from "react";
+import "./Navbar.css";
+import logo from "../../assets/logo.png";
+import arrow_icon from "../../assets/arrow_icon.png";
+import { CoinContext } from "../../context/CoinContext";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { setCurrency } = useContext(CoinContext);
@@ -28,17 +27,21 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${menuOpen ? 'open' : ''}`}>
+    <nav className={`navbar ${menuOpen ? "open" : ""}`}>
       <Link to="/" className="logo-link">
         <img src={logo} alt="Logo" className="logo" />
       </Link>
 
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        
-        <li><Link to="/new-listing">Trending</Link></li>
-
-        <li><Link to="/calculator">Calculator</Link></li>
+        <li onClick={() => setMenuOpen(false)}>
+          <Link to="/">Home</Link>
+        </li>
+        <li onClick={() => setMenuOpen(false)}>
+          <Link to="/new-listing">Trending</Link>
+        </li>
+        <li onClick={() => setMenuOpen(false)}>
+          <Link to="/calculator">Calculator</Link>
+        </li>
       </ul>
 
       <div className="nav-right">
@@ -47,7 +50,9 @@ const Navbar = () => {
           <option value="eur">EUR</option>
           <option value="aed">AED</option>
         </select>
-        <button>Sign up <img src={arrow_icon} alt="" /></button>
+        <button>
+          Sign up <img src={arrow_icon} alt="" />
+        </button>
       </div>
 
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>

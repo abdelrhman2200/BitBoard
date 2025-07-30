@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./NewListing.css";
+import "./Trending.css";
 
 const NewListing = () => {
   const [coins, setCoins] = useState([]);

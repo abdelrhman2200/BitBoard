@@ -5,7 +5,8 @@ import Home from "./pages/Home/Home";
 import Coins from "./pages/Coins/Coins";
 import CoinDetails from "./pages/CoinDetails/CoinDetails.jsx";
 import Calculator from "./pages/Calculator/Calculator";
-import NewListing from './pages/NewListing/NewListing';
+import Trending from './pages/Trending/Trending.jsx';
+import Footer from "./components/Footer/Footer.jsx";
 
 
 
@@ -19,8 +20,9 @@ const App = () => {
         <Route path="/coins" element={<Coins />} />
         <Route path="/coin/:id" element={<CoinDetails />} />
         <Route path="/calculator" element={<Calculator />} />
-        <Route path="/new-listing" element={<NewListing />} />
+        <Route path="/Trending" element={<Trending />} />
       </Routes>
+      <Footer/>
     </div>
   );
 };

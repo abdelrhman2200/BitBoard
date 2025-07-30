@@ -151,21 +151,34 @@ const Home = () => {
         >
           ←
         </button>
-        {Array.from({ length: totalPages }, (_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrentPage(i + 1)}
-            className={currentPage === i + 1 ? "active" : ""}
-          >
-            {i + 1}
-          </button>
-        ))}
-        <button
-          onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
-          disabled={currentPage === totalPages}
-        >
-          →
-        </button>
+        {[...Array(totalPages)].map((_, i) => {
+  if (
+    i === 0 || // first
+    i === totalPages - 1 || // last
+    Math.abs(currentPage - (i + 1)) <= 1 // current, prev, next
+  ) {
+    return (
+      <button
+        key={i}
+        onClick={() => setCurrentPage(i + 1)}
+        className={currentPage === i + 1 ? "active" : ""}
+      >
+        {i + 1}
+      </button>
+    );
+  }
+
+  // Ellipsis
+  if (
+    (i === 1 && currentPage > 3) || // after first
+    (i === totalPages - 2 && currentPage < totalPages - 2)
+  ) {
+    return <span key={i} style={{ color: "#888", padding: "0 4px" }}>...</span>;
+  }
+
+  return null;
+})}
+
       </div>
     </div>
   );
