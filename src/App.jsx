@@ -7,7 +7,7 @@ import CoinDetails from "./pages/CoinDetails/CoinDetails.jsx";
 import Calculator from "./pages/Calculator/Calculator";
 import Trending from './pages/Trending/Trending.jsx';
 import Footer from "./components/Footer/Footer.jsx";
-import { HashRouter as Router } from "react-router-dom";
+
 
 
 

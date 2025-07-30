@@ -11,10 +11,10 @@ import CoinContextProvider from "./context/CoinContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <HashRouter basename="/BitBoard">
+    <BrowserRouter basename="/BitBoard">
       <CoinContextProvider>
         <App />
       </CoinContextProvider>
-    </HashRouter>
+    </BrowserRouter>
   </StrictMode>,
 );
